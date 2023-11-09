@@ -1,1 +1,1 @@
-export { add } from './add';
+export { yupResolver } from './yup-resolver';
