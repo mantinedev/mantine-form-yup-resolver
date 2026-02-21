@@ -105,6 +105,20 @@ form.errors;
 // }
 ```
 
+## Async validation
+
+```tsx
+import * as yup from 'yup';
+import { yupResolver } from 'mantine-form-yup-resolver';
+
+const schema = yup.object().shape({
+  email: yup.string().required('Invalid email').email('Invalid email'),
+});
+
+const validate = yupResolver(schema, { mode: 'async' });
+const errors = await validate({ email: 'invalid' });
+```
+
 ## License
 
 MIT
