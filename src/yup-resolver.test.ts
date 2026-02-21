@@ -109,5 +109,7 @@ it('validates schema asynchronously with mode async', async () => {
     age: 'You must be at least 18 to create an account',
   });
 
-  await expect(validate({ name: 'John', email: 'john@email.com', age: 18 })).resolves.toStrictEqual({});
+  await expect(validate({ name: 'John', email: 'john@email.com', age: 18 })).resolves.toStrictEqual(
+    {}
+  );
 });
